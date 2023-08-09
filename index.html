@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">Ayuda</a> </li>
+          <li> <a href="#rooms" class="nav-link">Cuartos</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurante</a> </li>
+          <li> <a href="#gallery" class="nav-link">Galería</a> </li>
+          <li> <a href="#contact" class="nav-link">Contacto</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>PORTA</h1>
+          <p>"Descubre el encanto porteño en nuestro hotel, donde cada estancia es un abrazo de bienestar." </p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <br><br><br><br><br><br><br><br><img src="image/a1.jpg" alt="" class="image1">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <br><br><br><br><br><br><br><h5>ELEVAMOS LA COMODIDAD AL NIVEL MÁS ALTO</h5>
+          <br><br><h2>Bienvenidos a Porta Hotel Resort</h2>
+          <br><br><p>El Ayacucho Hotel Plaza dispone de recepción las 24 horas, centro de negocios, bar y sala de juegos. Todos los días se sirve un desayuno americano. Los servicios de lavandería y de guardaequipaje están disponibles bajo petición.</p>
+          <p>Porta es el reflejo perfecto entre la modernidad y la energía que caracterizan a Ayacucho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Nuestras comodidades</h2>
+        <p>Nuestro hotel ofrece modernas instalaciones y servicios para satisfacerte en todo momento Ideal para tus vacaciones y eventos más importantes. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Piscina</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yoga</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & masaje</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Paseos en barcos</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Salvavidas</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Sala de conferencias</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Buceo</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Playa privada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>ELEVAMOS EL CONFORT AL NIVEL MÁS ALTO</h5>
+          <h2>Habitaciones / Suites</h2>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Suite ayacuchana</h3>
+            <p> <span>$</span>25<span>/por noche</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Junior suite</h3>
+            <p> <span>$</span>50 <span>/por noche</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Gran suite ayacuchana</h3>
+            <p> <span>$</span>70 <span>/por noche</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Nuestro Restaurante</h2>
+          <p> Disfrute de una exquisita cocina gourmet en nuestro restaurant, donde nuestros talentosos chefs elaboran los mejores platos de la gastronomía argentina e internacional.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Gastronomía peruana</h2>
+            <div class="accordionItemContent">
+              <p>"Embárcate en un viaje culinario a Perú con nuestros ceviches frescos, anticuchos sabrosos, ají de gallina y pisco sour, deleitando tu paladar con la riqueza de la gastronomía peruana."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gastronomía mexicana</h2>
+            <div class="accordionItemContent">
+              <p>"Deléitate con auténticos sabores mexicanos: tacos artesanales, guacamole fresco, margaritas refrescantes y la pasión culinaria de México en cada bocado."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gastronomía argentina</h2>
+            <div class="accordionItemContent">
+              <p>
+                "Descubre los auténticos sabores de Argentina: jugosos cortes de carne asada a la parrilla, empanadas caseras, chimichurri irresistible y el calor de la tradición culinaria argentina en cada plato."
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gatronimía italiana</h2>
+            <div class="accordionItemContent">
+              <p>"Sumérgete en la esencia de Italia: pizzas artesanales con masa fina y crujiente, pasta al dente con salsas caseras, risottos cremosos y auténticos sabores italianos que te transportarán a la Toscana."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        
+
+        <p>Aceptamos diferentes métodos de pago</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3></h3>
+
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3></h3>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contátanos</h3>
+
+        <ul>
+          <li>  Av. Olivos 4109, B1667 KQU, Tortuguitas, Pcia. de Buenos Aires</li>
+          <li><i class="far fa-envelope"></i>  grupoporta@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>  123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i> 876 543 2101 </li>
+          <li><i class="far fa-comments"></i>  24/ 7 Servicios al cliente </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
